@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import LoginPage from "./pages/login-page";
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -35,3 +38,55 @@
 //     }
 //   }
 // }
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      login(username: string, password: string): Chainable<void>;
+    }
+    interface Chainable {
+      login_1(value: string, isUsername: boolean): Chainable<void>;
+    }
+    interface Chainable {
+      apiRequest<T>(
+        method: string,
+        url: string,
+        payload?: any
+      ): Chainable<Response<T>>;
+    }
+  }
+}
+
+Cypress.Commands.add("login", (username: string, password: string) => {
+  LoginPage.typeUsername(username);
+  LoginPage.typePassword(password);
+  LoginPage.submit();
+});
+
+Cypress.Commands.add("login_1", (value: string, isUsername: boolean) => {
+  if (isUsername) {
+    LoginPage.typeUsername(value);
+  } else {
+    LoginPage.typePassword(value);
+  }
+
+  LoginPage.submit();
+});
+
+Cypress.Commands.add(
+  "apiRequest",
+  <T>(
+    method: string,
+    url: string,
+    payload?: any
+  ): Cypress.Chainable<Cypress.Response<T>> => {
+    return cy.request<T>({
+      method,
+      url,
+      body: payload,
+      headers: {
+        "x-api-key": "reqres-free-v1",
+      },
+    });
+  }
+);
