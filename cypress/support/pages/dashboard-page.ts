@@ -1,10 +1,10 @@
 const LOCATORS = {
-  dashboardFregment: '/dashboard'
+  dashboardFregment: "/dashboard",
 };
 
 class DashboardPage {
   isloaded() {
-    cy.url().should('include', LOCATORS.dashboardFregment);
+    cy.url().should("include", LOCATORS.dashboardFregment);
   }
 }
 

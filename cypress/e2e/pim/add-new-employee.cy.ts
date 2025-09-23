@@ -9,8 +9,6 @@ describe("Validate Add New Employee", () => {
     });
   });
 
-
-
   it.only("TC12 - should add a new employee successfully", () => {
     cy.fixture("employee").then((employee: any) => {
       cy.addEmployee(

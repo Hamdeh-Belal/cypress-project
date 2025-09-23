@@ -56,9 +56,13 @@ declare global {
       ): Chainable<Response<T>>;
     }
     interface Chainable {
-      addEmployee(firstName: string, lastName: string, employeeId: string): Chainable<void>;
+      addEmployee(
+        firstName: string,
+        lastName: string,
+        employeeId: string
+      ): Chainable<void>;
+    }
   }
-}
 }
 Cypress.Commands.add("login", (username: string, password: string) => {
   LoginPage.typeUsername(username);
@@ -94,9 +98,12 @@ Cypress.Commands.add(
   }
 );
 
-Cypress.Commands.add("addEmployee", (firstName: string, lastName: string, employeeId: string) => {
-  pimPage.visitAddEmployee();
-  pimPage.fillEmployeeForm(firstName, lastName, employeeId);
-  pimPage.submitForm();
-  pimPage.assertEmployeeAdded(firstName, lastName);
-});
+Cypress.Commands.add(
+  "addEmployee",
+  (firstName: string, lastName: string, employeeId: string) => {
+    pimPage.visitAddEmployee();
+    pimPage.fillEmployeeForm(firstName, lastName, employeeId);
+    pimPage.submitForm();
+    pimPage.assertEmployeeAdded(firstName, lastName);
+  }
+);
