@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import LoginPage from "./pages/login-page";
-import pimPage from "./pages/pim-page";
+import pimPage from "./pages/pim/pim-page";
 
 // ***********************************************
 // This example commands.ts shows you how to

@@ -1,4 +1,4 @@
-import AdminPage from "../../support/pages/admin-page";
+import {adminPage} from "../../support/pages/admin/admin-page";
 import LoginPage from "../../support/pages/login-page";
 
 describe("Validate module URLS and headers for all pages", () => {
@@ -11,8 +11,8 @@ describe("Validate module URLS and headers for all pages", () => {
   });
 
   it("TC11 - Should Open Admin Page and validate URL and header", () => {
-    AdminPage.openFromMenu();
-    AdminPage.validateURL();
-    AdminPage.validateHeader();
+    adminPage.openFromMenu();
+    adminPage.validateURL();
+    adminPage.validateHeader();
   });
 });

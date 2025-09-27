@@ -1,4 +1,4 @@
-import { MODULE_URL_FREG } from "../enum/modules-enums";
+import { MODULE_URL_FREG } from "../../enum/modules-enums";
 
 const LOCATORS = {
   firstName: 'input[name="firstName"]',
