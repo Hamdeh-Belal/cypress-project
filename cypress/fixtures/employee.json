@@ -1,8 +1,7 @@
 {
-    "valid":{
-        "firstName": "John",
-        "lastName": "Doe",
-        "employeeId": "78549"
-    }
-
+  "valid": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "employeeId": "78549"
+  }
 }

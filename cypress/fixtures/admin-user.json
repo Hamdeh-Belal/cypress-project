@@ -1,0 +1,14 @@
+{
+  "valid": {
+    "firstName": "John",
+    "middleName": "K",
+    "lastName": "Smith",
+    "name": "John Smith",
+    "employeeId": "20223",
+    "username": "john.smith.auto.bbb",
+    "password": "Test@12345*"
+  },
+  "leave": {
+    "leaveBalance": "10"
+  }
+}

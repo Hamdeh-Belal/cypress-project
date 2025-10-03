@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import LoginPage from "./pages/login-page";
+import { logout } from "./pages/logout-page";
 import pimPage from "./pages/pim/pim-page";
 
 // ***********************************************
@@ -46,6 +47,9 @@ declare global {
       login(username: string, password: string): Chainable<void>;
     }
     interface Chainable {
+      logout(): Chainable<void>;
+    }
+    interface Chainable {
       login_1(value: string, isUsername: boolean): Chainable<void>;
     }
     interface Chainable {
@@ -69,7 +73,9 @@ Cypress.Commands.add("login", (username: string, password: string) => {
   LoginPage.typePassword(password);
   LoginPage.submit();
 });
-
+Cypress.Commands.add("logout", () => {
+  logout.logout();
+});
 Cypress.Commands.add("login_1", (value: string, isUsername: boolean) => {
   if (isUsername) {
     LoginPage.typeUsername(value);
