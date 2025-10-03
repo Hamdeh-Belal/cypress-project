@@ -1,4 +1,4 @@
-import { UserHelper } from "../../helper/user-helper";
+import { ReqresUserHelper } from "../../support/helper/reqres-user-helper";
 import { ICreateUserRequest } from "../../interfaces/users-interface";
 
 describe("Create New User", () => {
@@ -8,7 +8,7 @@ describe("Create New User", () => {
       job: "leader",
     };
 
-    UserHelper.createUser(requestBody).then((response) => {
+    ReqresUserHelper.createUser(requestBody).then((response) => {
       expect(response.status).to.eq(201);
       expect(response.body).to.have.property("name", "morpheus");
       expect(response.body).to.have.property("job", "leader");

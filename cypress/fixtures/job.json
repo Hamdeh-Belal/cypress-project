@@ -1,0 +1,16 @@
+{
+  "jobDetails": {
+    "jobTitle": "Pirate",
+    "description": "Sailing across the Grand Line in search of the One Piece. Job includes battling Marines, eating questionable food, and occasionally yelling 'I’m gonna be King of the Pirates!'",
+    "note": "Warning: Devil Fruit users may lose swimming privileges. Apply only if you have the heart of a dreamer and the appetite of Luffy."
+  },
+  "vacancies": {
+    "name": "Future Pirate King",
+    "description": "Join a fearless crew of misfits on a wild adventure across the seas. Duties include treasure hunting, epic battles, and eating way too much meat. Glory, danger, and a massive bounty guaranteed!"
+  },
+  "interview": {
+    "title": "Pirate Position Interview",
+    "date": "2027-10-02",
+    "time": "09:45"
+  }
+}
